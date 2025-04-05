@@ -7,3 +7,21 @@
 + If requests were ok with **Admin-Restriction-Policy**, OpenResty passes the request to HAproxy.
 
 + HAproxy balances the requests between your search heads.
+
+Installation of HA-Proxy
+# Prerequisites
+Disabling of SELINUX:
+```
+setenforce 0
+```
+
+# Installation
+```
+yum install haproxy
+```
+
+Setting Capabilities:
+```
+sudo setcap 'cap_net_bind_service,cap_net_raw,cap_net_admin+eip' /usr/sbin/haproxy
+```
+
