@@ -131,3 +131,48 @@ server {
     }
 }
 ```
+
+** Step 3: You should make a little change to nginx.conf 😎**
+
+Run the following command and add the following line to the config file.
+
+```
+vi /usr/local/openresty/nginx/conf/nginx.conf
+```
+**NOTE🧐 : Do not delete anything from this config file, just add the following line**
+
+```
+include /usr/local/openresty/nginx/conf/conf.d/*.conf;
+```
+You can figure out where to add this line in the below Picture
+
+![Drawing1](https://github.com/user-attachments/assets/daa2603d-b724-465f-9ab1-950bead856be)
+
+# Create a self-signed certificate for a secure connection to OpenResty
+
+Clients must be able to connect to **your current machine** via HTTPS. so just define and create a self-signed certificate by running the following commands:
+
+```
+sudo mkdir -p /usr/local/openresty/nginx/ssl
+```
+```
+sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /usr/local/openresty/nginx/ssl/nginx-selfsigned.key -out /usr/local/openresty/nginx/ssl/nginx-selfsigned.crt
+```
+
+For all of them enter dot(.), except "Common Name":
+
++ Country Name (2 letter code) [AU]: 👀 just enter a dot
+
++ State or Province Name (full name) [Some-State]: 👀 just enter a dot
+
++ Locality Name (eg, city) []:
+
++ Organization Name (eg, company) [Internet Widgits Pty Ltd]:👀 just enter a dot
+
++ Organizational Unit Name (eg, section) []: 👀 just enter a dot
+
++ Common Name (e.g. server FQDN or YOUR name) []: # 😏 enter the IP of load balancer **\<Your Current Machine IP Address\>** 
+
++ Email Address: 👀 just enter a dot
+
+✅ Now certificate has been created and your clients can connect to your current machine via HTTPS.
