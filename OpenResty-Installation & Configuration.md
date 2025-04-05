@@ -193,3 +193,7 @@ Start with this command:
 ```
 /usr/local/openresty/bin/openresty
 ```
+or
+```
+openresty
+```
