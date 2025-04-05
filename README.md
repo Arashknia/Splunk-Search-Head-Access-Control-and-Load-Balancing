@@ -1,10 +1,10 @@
-# Splunk-Search-Head-Access-Control-and-Load-Balancing
-Splunk Search-Head Access Control and Load Balancing
+🔐 OpenResty – Web-Level Access Control
+OpenResty is used to enforce web-based access restrictions. For example, you can configure it to allow only specific users—such as an admin—from a specific IP address to access the Splunk Search Head.
 
-OpenResty: with this tool, you can set restrictions for access control for example if you want only the admin to log in to your destination with a specific IP Address. 
-but why don't we use Firewall? this restriction is not based on the network. it is only based on the web requests itself.
+Note: This type of restriction is handled at the web request level, not at the network level like a firewall.
 
-HA-Proxy: with this tool, you can set load-balance on different load-balancing algorithms.
+⚖️ HAProxy – Load Balancing
+HAProxy is used to distribute incoming traffic across multiple Splunk Search Heads using various load-balancing algorithms. This ensures high availability and better performance under load.
 
-This repository is made by 'Arashk Taqiniarami' and 'Zahra Sheykhpour'.
-All Rights are reserved!
+This project is created by Arashk Taqi Niarami and Zahra Sheykhpour.
+All rights reserved.
