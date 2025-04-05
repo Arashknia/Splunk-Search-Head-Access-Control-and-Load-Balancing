@@ -14,8 +14,9 @@ This is the scenario:
 
 **Step 1: Install Required Dependencies**
 
-Before installing OpenResty, ensure that your system is up-to-date and has the required dependencies.
+Before installing OpenResty, make sure that your system is up-to-date and has the required dependencies.
 ```
 sudo yum update
 sudo yum install -y gcc pcre-devel zlib-devel make unzip
 sudo yum install gcc make pcre-devel zlib-devel openssl-devel 
+```
