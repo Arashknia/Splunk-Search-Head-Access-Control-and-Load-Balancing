@@ -50,7 +50,7 @@ cd ~
 
 # Configuration
 
-**Step 1: splunk_admin_restriction.conf configuration
+**Step 1: splunk_admin_restriction.conf configuration***
 
 Create the following directory:
 
