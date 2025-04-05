@@ -134,7 +134,7 @@ server {
 }
 ```
 
-** Step 3: You should make a little change to nginx.conf 😎**
+** Step 3: You should make a little change to nginx.conf **
 
 Run the following command and add the following line to the config file.
 
@@ -179,12 +179,7 @@ For all of them enter dot(.), except "Common Name":
 
 ✅ Now certificate has been created and your clients can connect to your current machine via HTTPS.
 
-** Step 4: Starting OpenResty and logging configurations 😎**
-
-set these capabilities:
-```
-setcap 'cap_net_bind_service,cap_net_raw,cap_net_admin+eip' /usr/sbin/haproxy
-```
+** Step 4: Starting OpenResty and logging configurations **
 
 export to PATH:
 ```
