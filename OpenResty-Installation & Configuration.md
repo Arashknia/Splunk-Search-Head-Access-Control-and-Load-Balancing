@@ -10,11 +10,41 @@
 
 # Install OpenResty
 
-**Step 1: Install Required Dependencies**
+**Step 1: Prerequisite**
 
 Before installing OpenResty, make sure that your system is up-to-date and has the required dependencies.
 ```
 sudo yum update
 sudo yum install -y gcc pcre-devel zlib-devel make unzip
 sudo yum install gcc make pcre-devel zlib-devel openssl-devel 
+```
+
+**Step 2: Preparing tar package**
+
+Now you should put the **openresty-1.27.1.1.tar.gz** in the root directory.
+
+Run the following commands in the right order. 🔥 **Do not change the order of commands.**
+
+```
+tar -zxvf openresty-1.27.1.1.tar.gz
+```
+
+```
+cd openresty-1.27.1.1
+```
+
+```
+./configure -j2
+```
+
+```
+make -j2
+```
+
+```
+sudo make install
+```
+
+```
+cd ~
 ```
