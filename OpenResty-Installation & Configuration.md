@@ -10,12 +10,14 @@
 
 # Install OpenResty
 
-**Step 1: Prerequisite**
+**Step 1: Prerequisites**
 
 Before installing OpenResty, make sure that your system is up-to-date and has the required dependencies.
 ```
 sudo yum update
 sudo yum install -y gcc pcre-devel zlib-devel make unzip openssl-devel perl
+systemctl disable firewalld
+systemctl stop firewalld
 ```
 
 **Step 2: Preparing tar package**
@@ -176,3 +178,23 @@ For all of them enter dot(.), except "Common Name":
 + Email Address: 👀 just enter a dot
 
 ✅ Now certificate has been created and your clients can connect to your current machine via HTTPS.
+
+** Step 4: Starting OpenResty and logging configurations 😎**
+
+set these capabilities:
+```
+setcap 'cap_net_bind_service,cap_net_raw,cap_net_admin+eip' /usr/sbin/haproxy
+```
+
+export to PATH:
+```
+export PATH=/usr/local/openresty/bin:$PATH
+```
+```
+export PATH=/usr/local/openresty/bin:/usr/local/openresty/nginx/sbin:$PATH
+```
+
+Start with this command:
+```
+/usr/local/openresty/bin/openresty
+```
