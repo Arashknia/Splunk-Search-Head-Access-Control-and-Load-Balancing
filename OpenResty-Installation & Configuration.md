@@ -1,6 +1,4 @@
-# Admin restriction policy
-
-This is the scenario:
+# This is the scenario:
 
 + Clients enter: "https://\<IP-Address-of-OpenResty-Machine\>"
 
