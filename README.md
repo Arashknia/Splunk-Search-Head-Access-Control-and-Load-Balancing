@@ -7,7 +7,7 @@ Note: This type of restriction is handled at the web request level, not at the n
 HAProxy is used to distribute incoming traffic across multiple Splunk Search Heads using various load-balancing algorithms. This ensures high availability and better performance under load.
 
 This project is tested on Oracle Linux 9.x.x.
-This project is created by Arashk Taqi Niarami and Zahra Sheykhpour.
+This project is created by 'Arashk TaqiNiarami' and 'Zahra Sheykhpour'.
 All rights reserved.
 
 source: https://openresty.org/en/installation.html
