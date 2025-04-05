@@ -9,3 +9,5 @@ HAProxy is used to distribute incoming traffic across multiple Splunk Search Hea
 This project is tested on Oracle Linux 9.x.x.
 This project is created by Arashk Taqi Niarami and Zahra Sheykhpour.
 All rights reserved.
+
+source: https://openresty.org/en/installation.html
