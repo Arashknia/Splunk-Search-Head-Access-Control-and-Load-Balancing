@@ -58,11 +58,13 @@ Create the following directory:
 sudo mkdir -p /usr/local/openresty/nginx/conf/conf.d/
 ```
 
-🧐 Create the config file "splunk_admin_restriction.conf" by running the following command and add **splunk_admin_restriction** file content to this file.
+🧐 Create the config file "splunk_admin_restriction.conf" by running the following command. 
 ```
 vi /usr/local/openresty/nginx/conf/conf.d/splunk_admin_restriction.conf
 ```
 
+add these content to **splunk_admin_restriction** file.
+**IMPORTANT HINT: admin policy is a regex "location ~ ^/[^/]+/account/login$" which checks the requests that have "account" and "login" within it. then if the username was "admin" and the request was coming from the IP 192.168.101.127 (which you have to change based on your choice), the admin will be able to log in**
 ```
 # OpenResty NGINX + Lua after installing HAProxy
 # ===============================================
