@@ -68,17 +68,17 @@ vi /usr/local/openresty/nginx/conf/conf.d/splunk_admin_restriction.conf
 # ===============================================
 # This config file is to satisfy both requirements
 
-# Redirect HTTP to HTTPS
+# Redirect HTTP to HTTPS (Change server_name IP from 192.168.101.111 to your current server IP or current machine IP)
 server {
     listen 80;
-    server_name 192.168.101.110;
+    server_name 192.168.101.111;
     return 301 https://$host$request_uri;
 }
 
 # HTTPS with Lua IP-based restriction for admin login
 server {
     listen 443 ssl;
-    server_name 192.168.101.110;
+    server_name 192.168.101.111;
 
     ssl_certificate /usr/local/openresty/nginx/ssl/nginx-selfsigned.crt;
     ssl_certificate_key /usr/local/openresty/nginx/ssl/nginx-selfsigned.key;
